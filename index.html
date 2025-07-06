@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innova IT - Consultoría, Redes e IA</title>
+    <title id="pageTitle">Innova IT - Consultoría, Redes e IA</title>
     <!-- Incluye Tailwind CSS para un diseño moderno y responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Enlace a la fuente Inter de Google Fonts -->
@@ -30,17 +30,28 @@
     <header class="bg-gray-800 text-white p-6 shadow-2xl rounded-b-xl">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <!-- Título/Marca con gradiente de texto -->
-            <h1 class="text-4xl lg:text-5xl font-extrabold mb-4 md:mb-0 gradient-text bg-gradient-to-r from-blue-400 to-teal-500">
+            <h1 class="text-4xl lg:text-5xl font-extrabold mb-4 md:mb-0 gradient-text bg-gradient-to-r from-blue-400 to-teal-500" id="brandName">
                 Innova IT Solutions
             </h1>
             <!-- Navegación principal -->
             <nav>
                 <ul class="flex flex-wrap justify-center space-x-6 text-lg font-medium">
-                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Inicio</a></li>
-                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Servicios</a></li>
-                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Soluciones IA</a></li>
-                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Proyectos</a></li>
-                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Contacto</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105" data-translate="navInicio">Inicio</a></li>
+                    <li><a href="#servicios-intro-section" class="hover:text-blue-300 transition duration-300 transform hover:scale-105" data-translate="navServicios">Servicios</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105" data-translate="navSolucionesIA">Soluciones IA</a></li>
+                    <!-- Eliminado el enlace "Proyectos" -->
+                    <li><a href="#tarifas-section" class="hover:text-blue-300 transition duration-300 transform hover:scale-105" data-translate="navTarifas">Tarifas</a></li>
+                    <!-- Nuevo enlace para "Formas de pago" -->
+                    <li><a href="#payment-methods-section" class="hover:text-blue-300 transition duration-300 transform hover:scale-105" data-translate="navFormasDePago">Formas de pago</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105" data-translate="navContacto">Contacto</a></li>
+                    <!-- Selector de Idioma -->
+                    <li class="relative group">
+                        <a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105" data-translate="navIdioma">Idioma</a>
+                        <ul class="absolute hidden group-hover:block bg-gray-700 text-white rounded-md shadow-lg py-2 mt-2 whitespace-nowrap">
+                            <li><a href="#" id="langEs" class="block px-4 py-2 hover:bg-gray-600">Español</a></li>
+                            <li><a href="#" id="langEn" class="block px-4 py-2 hover:bg-gray-600">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -49,14 +60,14 @@
     <!-- Sección Hero / Banner Principal -->
     <section class="bg-gradient-to-br from-gray-900 to-gray-700 text-white py-24 px-8 text-center shadow-lg">
         <div class="container mx-auto">
-            <h2 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Impulsa Tu Negocio con <br class="md:hidden"> Tecnología Inteligente y Redes Robustas
+            <h2 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-translate="heroTitle">
+                Impulsa Tu Negocio y administra tus perfiles de redes, con <br class="md:hidden"> Tecnología Inteligente y Redes Robustas
             </h2>
-            <p class="text-xl lg:text-2xl leading-relaxed mb-10 max-w-4xl mx-auto opacity-90">
-                Expertos en Consultoría IT, Ciberseguridad, Redes y Herramientas de IA para la Optimización Empresarial.
+            <p class="text-xl lg:text-2xl leading-relaxed mb-10 max-w-4xl mx-auto opacity-90" data-translate="heroSubtitle">
+                Trabajmos a distancia en Consultoría IT, Ciberseguridad, Redes y Herramientas de IA para la Optimización Empresarial.
             </p>
             <!-- Botón de llamada a la acción principal -->
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transform transition duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-400">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transform transition duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-400" data-translate="heroButton">
                 Descubre Nuestros Servicios
             </button>
         </div>
@@ -67,68 +78,86 @@
 
         <!-- Sección "Acerca de Nosotros" -->
         <section class="mb-16 text-center">
-            <h3 class="text-4xl font-bold mb-6 text-gray-800">Acerca de Innova IT Solutions</h3>
+            <h3 class="text-4xl font-bold mb-6 text-gray-800" data-translate="aboutTitle">Acerca de Innova IT Solutions</h3>
             <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
-                <p class="mb-4">
+                <p class="mb-4" data-translate="aboutParagraph1">
                     En Innova IT Solutions, somos un equipo dedicado a brindar soluciones tecnológicas avanzadas para empresas de todos los tamaños. Con años de experiencia en consultoría, infraestructura de redes y la implementación de inteligencia artificial, nuestro objetivo es optimizar tus operaciones y asegurar tu crecimiento en la era digital.
                 </p>
-                <p>
-                    Nos especializamos en transformar desafíos tecnológicos en oportunidades, garantizando que tu infraestructura sea segura, eficiente y esté preparada para el futuro.
+                <p class="mb-4" data-translate="aboutParagraph2">
+                    Nos especializamos en transformar desafíos tecnológicos en oportunidades, garantizando que tu infraestructura sea segura, eficiente y esté preparada para el futuro. **Ofrecemos nuestros servicios de forma remota, aprovechando la flexibilidad y escalabilidad de las soluciones en la nube para llegar a clientes en cualquier lugar y optimizar sus operaciones sin importar su ubicación física.**
                 </p>
             </div>
         </section>
 
         <hr class="my-16 border-gray-200">
 
-        <!-- Sección "Nuestros Servicios" -->
+        <!-- Nueva Sección de Introducción a Servicios -->
+        <section id="servicios-intro-section" class="mb-16 text-center bg-blue-50 p-10 rounded-lg shadow-md">
+            <h3 class="text-4xl font-bold mb-6 text-blue-800" data-translate="servicesIntroTitle">Nuestros Servicios</h3>
+            <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4" data-translate="servicesIntroParagraph1">
+                    Asesoramos a empresas y personas en su "transformación digital y tecnológica", para que sean más eficientes y competitivas. Les asesoramos sobre la tecnología adecuada a sus necesidades y retos.
+                </p>
+                <p class="mb-4" data-translate="servicesIntroParagraph2">
+                    La tecnología está al alcance de todo tipo de empresas, sin importar su tamaño. Es sorprendente lo económico que puede resultar la automatización.
+                </p>
+                <p class="font-semibold text-blue-700" data-translate="servicesIntroCallToAction">
+                    ¡Consúltenos sin compromiso!
+                </p>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
+        <!-- Sección "Nuestros Servicios Clave" -->
         <section class="mb-16">
-            <h3 class="text-4xl font-bold mb-10 text-center text-gray-800">Nuestros Servicios Clave</h3>
+            <h3 class="text-4xl font-bold mb-10 text-center text-gray-800" data-translate="keyServicesTitle">Nuestros Servicios Clave</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Tarjeta de Servicio: Consultoría IT -->
                 <div class="bg-indigo-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-indigo-600 mb-4 text-center">💡</div> <!-- Icono de Consultoría (puedes reemplazarlo con SVG) -->
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Consultoría IT Estratégica</h4>
-                    <p class="text-gray-700 text-center">
+                    <div class="text-5xl text-indigo-600 mb-4 text-center">💡</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center" data-translate="service1Title">Consultoría IT Estratégica</h4>
+                    <p class="text-gray-700 text-center" data-translate="service1Description">
                         Asesoramiento experto para alinear tu estrategia tecnológica con tus objetivos de negocio, optimizando procesos y recursos.
                     </p>
                 </div>
                 <!-- Tarjeta de Servicio: Armado y Mantenimiento de Redes -->
                 <div class="bg-teal-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-teal-600 mb-4 text-center">🌐</div> <!-- Icono de Redes (puedes reemplazarlo con SVG) -->
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Armado y Mantenimiento de Redes</h4>
-                    <p class="text-gray-700 text-center">
+                    <div class="text-5xl text-teal-600 mb-4 text-center">🌐</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center" data-translate="service2Title">Armado y Mantenimiento de Redes</h4>
+                    <p class="text-gray-700 text-center" data-translate="service2Description">
                         Diseño, implementación y soporte continuo de infraestructuras de red robustas y seguras para tu empresa.
                     </p>
                 </div>
                 <!-- Tarjeta de Servicio: Soluciones de IA -->
                 <div class="bg-purple-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-purple-600 mb-4 text-center">🤖</div> <!-- Icono de IA (puedes reemplazarlo con SVG) -->
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Implementación de Herramientas IA</h4>
-                    <p class="text-gray-700 text-center">
+                    <div class="text-5xl text-purple-600 mb-4 text-center">🤖</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center" data-translate="service3Title">Implementación de Herramientas IA</h4>
+                    <p class="text-gray-700 text-center" data-translate="service3Description">
                         Integración de soluciones de Inteligencia Artificial para automatización, análisis de datos y mejora de la eficiencia operativa.
                     </p>
                 </div>
                 <!-- Nueva Tarjeta de Servicio: Ciberseguridad -->
                 <div class="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-red-600 mb-4 text-center">🔒</div> <!-- Icono de Seguridad (puedes reemplazarlo con SVG) -->
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Ciberseguridad Avanzada</h4>
-                    <p class="text-gray-700 text-center">
+                    <div class="text-5xl text-red-600 mb-4 text-center">🔒</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center" data-translate="service4Title">Ciberseguridad Avanzada</h4>
+                    <p class="text-gray-700 text-center" data-translate="service4Description">
                         Protección integral contra amenazas cibernéticas, garantizando la seguridad y privacidad de tus datos.
                     </p>
                 </div>
                 <!-- Nueva Tarjeta de Servicio: Soporte Técnico -->
                 <div class="bg-yellow-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-yellow-600 mb-4 text-center">🛠️</div> <!-- Icono de Soporte (puedes reemplazarlo con SVG) -->
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Soporte Técnico Especializado</h4>
-                    <p class="text-gray-700 text-center">
+                    <div class="text-5xl text-yellow-600 mb-4 text-center">🛠️</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center" data-translate="service5Title">Soporte Técnico Especializado</h4>
+                    <p class="text-gray-700 text-center" data-translate="service5Description">
                         Asistencia técnica rápida y eficiente para resolver cualquier incidencia y mantener tus sistemas operativos.
                     </p>
                 </div>
                 <!-- Nueva Tarjeta de Servicio: Desarrollo de Software a Medida -->
                 <div class="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-blue-600 mb-4 text-center">💻</div> <!-- Icono de Desarrollo (puedes reemplazarlo con SVG) -->
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Desarrollo de Software a Medida</h4>
-                    <p class="text-gray-700 text-center">
+                    <div class="text-5xl text-blue-600 mb-4 text-center">💻</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center" data-translate="service6Title">Desarrollo de Software a Medida</h4>
+                    <p class="text-gray-700 text-center" data-translate="service6Description">
                         Creación de aplicaciones y herramientas personalizadas para optimizar tus flujos de trabajo y necesidades específicas.
                     </p>
                 </div>
@@ -139,29 +168,29 @@
 
         <!-- Sección "Por Qué Elegirnos" -->
         <section class="mb-16 text-center bg-gray-50 p-10 rounded-lg shadow-inner">
-            <h3 class="text-4xl font-bold mb-8 text-gray-800">¿Por Qué Elegir Innova IT Solutions?</h3>
+            <h3 class="text-4xl font-bold mb-8 text-gray-800" data-translate="whyChooseUsTitle">¿Por Qué Elegir Innova IT Solutions?</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="text-left">
-                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Integración de IA</h4>
-                    <p class="text-gray-700">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700" data-translate="whyChooseUs1Title">Integración de IA</h4>
+                    <p class="text-gray-700" data-translate="whyChooseUs1Description">
                         Llevamos la eficiencia al siguiente nivel con la implementación estratégica de inteligencia artificial en tus procesos.
                     </p>
                 </div>
                 <div class="text-left">
-                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Soluciones Personalizadas</h4>
-                    <p class="text-gray-700">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700" data-translate="whyChooseUs2Title">Soluciones Personalizadas</h4>
+                    <p class="text-gray-700" data-translate="whyChooseUs2Description">
                         Cada negocio es único. Diseñamos soluciones IT a medida que se adaptan perfectamente a tus requerimientos.
                     </p>
                 </div>
                 <div class="text-left">
-                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Equipo de Expertos</h4>
-                    <p class="text-gray-700">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700" data-translate="whyChooseUs3Title">Equipo de Expertos</h4>
+                    <p class="text-gray-700" data-translate="whyChooseUs3Description">
                         Contamos con profesionales altamente cualificados y certificados en las últimas tecnologías.
                     </p>
                 </div>
                 <div class="text-left">
-                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Resultados Medibles</h4>
-                    <p class="text-gray-700">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700" data-translate="whyChooseUs4Title">Resultados Medibles</h4>
+                    <p class="text-gray-700" data-translate="whyChooseUs4Description">
                         Nos enfocamos en ofrecer soluciones que generen un impacto positivo y cuantificable en tu negocio.
                     </p>
                 </div>
@@ -170,16 +199,71 @@
 
         <hr class="my-16 border-gray-200">
 
+        <!-- Nueva Sección de Tarifas -->
+        <section id="tarifas-section" class="mb-16 p-8 bg-gray-100 rounded-lg shadow-md">
+            <h3 class="text-4xl font-bold mb-6 text-gray-800 text-center" data-translate="tariffsTitle">Nuestras Tarifas</h3>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4" data-translate="tariffsParagraph1">
+                    En Innova IT Solutions, creemos en la transparencia y la flexibilidad. Nuestras tarifas se adaptan a la complejidad y el alcance de cada proyecto, asegurando una relación calidad-precio óptima para tu inversión tecnológica.
+                </p>
+                <p class="mb-4" data-translate="tariffsParagraph2">
+                    Ofrecemos diferentes modelos de tarificación para ajustarnos a tus necesidades:
+                </p>
+                <ul class="list-disc list-inside mb-6 pl-4">
+                    <li class="mb-2" data-translate="tariffsBullet1">**Tarifas por Proyecto:** Ideal para proyectos con un alcance definido y objetivos claros. Te proporcionamos un presupuesto cerrado y detallado.</li>
+                    <li class="mb-2" data-translate="tariffsBullet2">**Tarifas por Hora:** Perfectas para consultorías puntuales, soporte técnico o tareas que requieren flexibilidad.</li>
+                    <li class="mb-2" data-translate="tariffsBullet3">**Planes de Mantenimiento Mensual:** Para un soporte continuo y proactivo de tus sistemas y redes, garantizando la estabilidad y el rendimiento.</li>
+                </ul>
+                <p class="mb-4" data-translate="tariffsParagraph3">
+                    Te invitamos a contactarnos para una consulta gratuita donde evaluaremos tus necesidades y te ofreceremos una propuesta personalizada sin compromiso. Creemos que la tecnología de calidad no tiene por qué ser inaccesible.
+                </p>
+                <div class="text-center mt-8">
+                    <a href="#contact-form-section" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400" data-translate="tariffsButton">
+                        Solicitar Presupuesto Personalizado
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
+        <!-- Nueva Sección de Formas de Pago -->
+        <section id="payment-methods-section" class="mb-16 p-8 bg-blue-100 rounded-lg shadow-md">
+            <h3 class="text-4xl font-bold mb-6 text-blue-800 text-center" data-translate="paymentMethodsTitle">Formas de Pago</h3>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4" data-translate="paymentMethodsParagraph1">
+                    En Innova IT Solutions, ofrecemos diversas opciones de pago para facilitar la contratación de nuestros servicios. Nos adaptamos a tus preferencias y necesidades para asegurar una transacción cómoda y segura.
+                </p>
+                <h4 class="text-2xl font-semibold mb-3 text-blue-700" data-translate="paymentMethodsSubtitle1">Opciones de Pago Disponibles:</h4>
+                <ul class="list-disc list-inside mb-6 pl-4">
+                    <li class="mb-2" data-translate="paymentMethodsBullet1">**Transferencia Bancaria:** Realiza pagos directamente a nuestra cuenta bancaria. Los detalles serán proporcionados en la factura.</li>
+                    <li class="mb-2" data-translate="paymentMethodsBullet2">**Tarjetas de Crédito/Débito:** Aceptamos pagos con las principales tarjetas a través de plataformas seguras.</li>
+                    <li class="mb-2" data-translate="paymentMethodsBullet3">**Billeteras Virtuales:** Paga de forma rápida y segura con tus plataformas preferidas como **Skrill, Neteller, AirTM y PayPal**.</li>
+                    <li class="mb-2" data-translate="paymentMethodsBullet4">**Criptomonedas (a solicitud):** Para clientes que prefieren la flexibilidad de las monedas digitales, podemos habilitar esta opción bajo consulta.</li>
+                </ul>
+                <p class="mb-4" data-translate="paymentMethodsParagraph2">
+                    Todas nuestras transacciones se realizan con la máxima seguridad y transparencia. Si tienes alguna pregunta sobre las formas de pago o necesitas una opción específica, no dudes en contactarnos.
+                </p>
+                <div class="text-center mt-8">
+                    <a href="#contact-form-section" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400" data-translate="paymentMethodsButton">
+                        Contactar para Métodos de Pago
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
         <!-- Sección de Llamada a la Acción para Consulta -->
         <section class="text-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-10 rounded-lg shadow-xl">
-            <h3 class="text-4xl font-bold mb-4">
+            <h3 class="text-4xl font-bold mb-4" data-translate="ctaTitle">
                 Transforma Tu Infraestructura Tecnológica
             </h3>
-            <p class="text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p class="text-xl leading-relaxed mb-8 max-w-3xl mx-auto" data-translate="ctaSubtitle">
                 ¿Listo para optimizar tus sistemas, asegurar tus redes e integrar la inteligencia artificial? Contáctanos hoy mismo.
             </p>
             <!-- Botón de llamada a la acción para servicios -->
-            <button class="bg-white hover:bg-gray-100 text-indigo-700 font-bold py-4 px-10 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white">
+            <button class="bg-white hover:bg-gray-100 text-indigo-700 font-bold py-4 px-10 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white" data-translate="ctaButton">
                 Agenda una Consulta Gratuita
             </button>
         </section>
@@ -188,7 +272,7 @@
     <!-- Pie de página -->
     <footer class="bg-gray-900 text-white p-8 mt-16 rounded-t-xl">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
-            <p class="mb-4 md:mb-0">&copy; 2025 Innova IT Solutions. Todos los derechos reservados.</p>
+            <p class="mb-4 md:mb-0" data-translate="footerCopyright">&copy; 2025 Innova IT Solutions. Todos los derechos reservados.</p>
             <div class="flex space-x-6">
                 <!-- Puedes añadir iconos de redes sociales aquí (por ejemplo, Font Awesome o SVG) -->
                 <a href="#" class="hover:text-blue-400 transition duration-300">Facebook</a>
@@ -198,5 +282,175 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Objeto de traducciones
+        const translations = {
+            es: {
+                pageTitle: "Innova IT - Consultoría, Redes e IA",
+                navInicio: "Inicio",
+                navServicios: "Servicios",
+                navSolucionesIA: "Soluciones IA",
+                navTarifas: "Tarifas",
+                navFormasDePago: "Formas de pago",
+                navContacto: "Contacto",
+                navIdioma: "Idioma",
+                heroTitle: "Impulsa Tu Negocio y administra tus perfiles de redes, con Tecnología Inteligente y Redes Robustas",
+                heroSubtitle: "Trabajamos a distancia en Consultoría IT, Ciberseguridad, Redes y Herramientas de IA para la Optimización Empresarial.",
+                heroButton: "Descubre Nuestros Servicios",
+                aboutTitle: "Acerca de Innova IT Solutions",
+                aboutParagraph1: "En Innova IT Solutions, somos un equipo dedicado a brindar soluciones tecnológicas avanzadas para empresas de todos los tamaños. Con años de experiencia en consultoría, infraestructura de redes y la implementación de inteligencia artificial, nuestro objetivo es optimizar tus operaciones y asegurar tu crecimiento en la era digital.",
+                aboutParagraph2: "Nos especializamos en transformar desafíos tecnológicos en oportunidades, garantizando que tu infraestructura sea segura, eficiente y esté preparada para el futuro. Ofrecemos nuestros servicios de forma remota, aprovechando la flexibilidad y escalabilidad de las soluciones en la nube para llegar a clientes en cualquier lugar y optimizar sus operaciones sin importar su ubicación física.",
+                servicesIntroTitle: "Nuestros Servicios",
+                servicesIntroParagraph1: "Asesoramos a empresas en su **transformación digital y tecnológica** para que sean más eficientes y competitivas. Les asesoramos sobre la tecnología adecuada a sus necesidades y retos.",
+                servicesIntroParagraph2: "La tecnología está al alcance de todo tipo de empresas, sin importar su tamaño. Es sorprendente lo económico que puede resultar la automatización.",
+                servicesIntroCallToAction: "¡Consúltenos sin compromiso!",
+                keyServicesTitle: "Nuestros Servicios Clave",
+                service1Title: "Consultoría IT Estratégica",
+                service1Description: "Asesoramiento experto para alinear tu estrategia tecnológica con tus objetivos de negocio, optimizando procesos y recursos.",
+                service2Title: "Armado y Mantenimiento de Redes",
+                service2Description: "Diseño, implementación y soporte continuo de infraestructuras de red robustas y seguras para tu empresa.",
+                service3Title: "Implementación de Herramientas IA",
+                service3Description: "Integración de soluciones de Inteligencia Artificial para automatización, análisis de datos y mejora de la eficiencia operativa.",
+                service4Title: "Ciberseguridad Avanzada",
+                service4Description: "Protección integral contra amenazas cibernéticas, garantizando la seguridad y privacidad de tus datos.",
+                service5Title: "Soporte Técnico Especializado",
+                service5Description: "Asistencia técnica rápida y eficiente para resolver cualquier incidencia y mantener tus sistemas operativos.",
+                service6Title: "Desarrollo de Software a Medida",
+                service6Description: "Creación de aplicaciones y herramientas personalizadas para optimizar tus flujos de trabajo y necesidades específicas.",
+                whyChooseUsTitle: "¿Por Qué Elegir Innova IT Solutions?",
+                whyChooseUs1Title: "Integración de IA",
+                whyChooseUs1Description: "Llevamos la eficiencia al siguiente nivel con la implementación estratégica de inteligencia artificial en tus procesos.",
+                whyChooseUs2Title: "Soluciones Personalizadas",
+                whyChooseUs2Description: "Cada negocio es único. Diseñamos soluciones IT a medida que se adaptan perfectamente a tus requerimientos.",
+                whyChooseUs3Title: "Equipo de Expertos",
+                whyChooseUs3Description: "Contamos con profesionales altamente cualificados y certificados en las últimas tecnologías.",
+                whyChooseUs4Title: "Resultados Medibles",
+                whyChooseUs4Description: "Nos enfocamos en ofrecer soluciones que generen un impacto positivo y cuantificable en tu negocio.",
+                tariffsTitle: "Nuestras Tarifas",
+                tariffsParagraph1: "En Innova IT Solutions, creemos en la transparencia y la flexibilidad. Nuestras tarifas se adaptan a la complejidad y el alcance de cada proyecto, asegurando una relación calidad-precio óptima para tu inversión tecnológica.",
+                tariffsParagraph2: "Ofrecemos diferentes modelos de tarificación para ajustarnos a tus necesidades:",
+                tariffsBullet1: "**Tarifas por Proyecto:** Ideal para proyectos con un alcance definido y objetivos claros. Te proporcionamos un presupuesto cerrado y detallado.",
+                tariffsBullet2: "**Tarifas por Hora:** Perfectas para consultorías puntuales, soporte técnico o tareas que requieren flexibilidad.",
+                tariffsBullet3: "**Planes de Mantenimiento Mensual:** Para un soporte continuo y proactivo de tus sistemas y redes, garantizando la estabilidad y el rendimiento.",
+                tariffsParagraph3: "Te invitamos a contactarnos para una consulta gratuita donde evaluaremos tus necesidades y te ofreceremos una propuesta personalizada sin compromiso. Creemos que la tecnología de calidad no tiene por qué ser inaccesible.",
+                tariffsButton: "Solicitar Presupuesto Personalizado",
+                paymentMethodsTitle: "Formas de Pago",
+                paymentMethodsParagraph1: "En Innova IT Solutions, ofrecemos diversas opciones de pago para facilitar la contratación de nuestros servicios. Nos adaptamos a tus preferencias y necesidades para asegurar una transacción cómoda y segura.",
+                paymentMethodsSubtitle1: "Opciones de Pago Disponibles:",
+                paymentMethodsBullet1: "**Transferencia Bancaria:** Realiza pagos directamente a nuestra cuenta bancaria. Los detalles serán proporcionados en la factura.",
+                paymentMethodsBullet2: "**Tarjetas de Crédito/Débito:** Aceptamos pagos con las principales tarjetas a través de plataformas seguras.",
+                paymentMethodsBullet3: "**Billeteras Virtuales:** Paga de forma rápida y segura con tus plataformas preferidas como **Skrill, Neteller, AirTM y PayPal**.",
+                paymentMethodsBullet4: "**Criptomonedas (a solicitud):** Para clientes que prefieren la flexibilidad de las monedas digitales, podemos habilitar esta opción bajo consulta.",
+                paymentMethodsParagraph2: "Todas nuestras transacciones se realizan con la máxima seguridad y transparencia. Si tienes alguna pregunta sobre las formas de pago o necesitas una opción específica, no dudes en contactarnos.",
+                paymentMethodsButton: "Contactar para Métodos de Pago",
+                ctaTitle: "Transforma Tu Infraestructura Tecnológica",
+                ctaSubtitle: "¿Listo para optimizar tus sistemas, asegurar tus redes e integrar la inteligencia artificial? Contáctanos hoy mismo.",
+                ctaButton: "Agenda una Consulta Gratuita",
+                footerCopyright: "&copy; 2025 Innova IT Solutions. Todos los derechos reservados."
+            },
+            en: {
+                pageTitle: "Innova IT - Consulting, Networks & AI",
+                navInicio: "Home",
+                navServicios: "Services",
+                navSolucionesIA: "AI Solutions",
+                navTarifas: "Tariffs",
+                navFormasDePago: "Payment Methods",
+                navContacto: "Contact",
+                navIdioma: "Language",
+                heroTitle: "Boost Your Business and Manage Your Social Media Profiles with Smart Technology and Robust Networks",
+                heroSubtitle: "We work remotely in IT Consulting, Cybersecurity, Networks, and AI Tools for Business Optimization.",
+                heroButton: "Discover Our Services",
+                aboutTitle: "About Innova IT Solutions",
+                aboutParagraph1: "At Innova IT Solutions, we are a team dedicated to providing advanced technological solutions for businesses of all sizes. With years of experience in consulting, network infrastructure, and artificial intelligence implementation, our goal is to optimize your operations and ensure your growth in the digital age.",
+                aboutParagraph2: "We specialize in transforming technological challenges into opportunities, ensuring your infrastructure is secure, efficient, and future-ready. We offer our services remotely, leveraging the flexibility and scalability of cloud solutions to reach clients anywhere and optimize their operations regardless of their physical location.",
+                servicesIntroTitle: "Our Services",
+                servicesIntroParagraph1: "We advise companies on their **digital and technological transformation** to make them more efficient and competitive. We advise them on the appropriate technology for their needs and challenges.",
+                servicesIntroParagraph2: "Technology is within reach of all types of companies, regardless of their size. It is surprising how economical automation can be.",
+                servicesIntroCallToAction: "Consult us without obligation!",
+                keyServicesTitle: "Our Key Services",
+                service1Title: "Strategic IT Consulting",
+                service1Description: "Expert advice to align your technology strategy with your business objectives, optimizing processes and resources.",
+                service2Title: "Network Setup and Maintenance",
+                service2Description: "Design, implementation, and continuous support of robust and secure network infrastructures for your company.",
+                service3Title: "AI Tools Implementation",
+                service3Description: "Integration of Artificial Intelligence solutions for automation, data analysis, and operational efficiency improvement.",
+                service4Title: "Advanced Cybersecurity",
+                service4Description: "Comprehensive protection against cyber threats, ensuring the security and privacy of your data.",
+                service5Title: "Specialized Technical Support",
+                service5Description: "Fast and efficient technical assistance to resolve any incidents and keep your systems operational.",
+                service6Title: "Custom Software Development",
+                service6Description: "Creation of personalized applications and tools to optimize your workflows and specific needs.",
+                whyChooseUsTitle: "Why Choose Innova IT Solutions?",
+                whyChooseUs1Title: "AI Integration",
+                whyChooseUs1Description: "We take efficiency to the next level with the strategic implementation of artificial intelligence in your processes.",
+                whyChooseUs2Title: "Custom Solutions",
+                whyChooseUs2Description: "Every business is unique. We design tailor-made IT solutions that perfectly adapt to your requirements.",
+                whyChooseUs3Title: "Expert Team",
+                whyChooseUs3Description: "We have highly qualified and certified professionals in the latest technologies.",
+                whyChooseUs4Title: "Measurable Results",
+                whyChooseUs4Description: "We focus on delivering solutions that generate a positive and quantifiable impact on your business.",
+                tariffsTitle: "Our Tariffs",
+                tariffsParagraph1: "At Innova IT Solutions, we believe in transparency and flexibility. Our tariffs adapt to the complexity and scope of each project, ensuring optimal value for money for your technological investment.",
+                tariffsParagraph2: "We offer different pricing models to suit your needs:",
+                tariffsBullet1: "**Project-Based Fees:** Ideal for projects with a defined scope and clear objectives. We provide you with a closed and detailed budget.",
+                tariffsBullet2: "**Hourly Rates:** Perfect for ad-hoc consultations, technical support, or tasks that require flexibility.",
+                tariffsBullet3: "**Monthly Maintenance Plans:** For continuous and proactive support of your systems and networks, ensuring stability and performance.",
+                tariffsParagraph3: "We invite you to contact us for a free consultation where we will evaluate your needs and offer you a personalized proposal without obligation. We believe that quality technology does not have to be inaccessible.",
+                tariffsButton: "Request Personalized Quote",
+                paymentMethodsTitle: "Payment Methods",
+                paymentMethodsParagraph1: "At Innova IT Solutions, we offer various payment options to facilitate the contracting of our services. We adapt to your preferences and needs to ensure a comfortable and secure transaction.",
+                paymentMethodsSubtitle1: "Available Payment Options:",
+                paymentMethodsBullet1: "**Bank Transfer:** Make payments directly to our bank account. Details will be provided on the invoice.",
+                paymentMethodsBullet2: "**Credit/Debit Cards:** We accept payments with major cards through secure platforms.",
+                paymentMethodsBullet3: "**Virtual Wallets:** Pay quickly and securely with your preferred platforms like **Skrill, Neteller, AirTM, and PayPal**.",
+                paymentMethodsBullet4: "**Cryptocurrencies (upon request):** For clients who prefer the flexibility of digital currencies, we can enable this option upon consultation.",
+                paymentMethodsParagraph2: "All our transactions are carried out with maximum security and transparency. If you have any questions about payment methods or need a specific option, do not hesitate to contact us.",
+                paymentMethodsButton: "Contact for Payment Methods",
+                ctaTitle: "Transform Your Technological Infrastructure",
+                ctaSubtitle: "Ready to optimize your systems, secure your networks, and integrate artificial intelligence? Contact us today.",
+                ctaButton: "Schedule a Free Consultation",
+                footerCopyright: "&copy; 2025 Innova IT Solutions. All rights reserved."
+            }
+        };
+
+        // Función para establecer el idioma
+        function setLanguage(lang) {
+            document.documentElement.lang = lang; // Cambia el atributo lang de la etiqueta html
+            document.getElementById('pageTitle').textContent = translations[lang].pageTitle;
+
+            // Traducir elementos con data-translate
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.dataset.translate;
+                if (translations[lang][key]) {
+                    // Para contenido que pueda tener HTML (como negritas), usar innerHTML
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+        }
+
+        // Event Listeners para los botones de idioma
+        document.addEventListener('DOMContentLoaded', () => {
+            const langEs = document.getElementById('langEs');
+            const langEn = document.getElementById('langEn');
+
+            if (langEs) {
+                langEs.addEventListener('click', (e) => {
+                    e.preventDefault(); // Evita que el enlace recargue la página
+                    setLanguage('es');
+                });
+            }
+
+            if (langEn) {
+                langEn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Evita que el enlace recargue la página
+                    setLanguage('en');
+                });
+            }
+
+            // Establecer el idioma por defecto al cargar la página (ej. español)
+            setLanguage('es');
+        });
+    </script>
 </body>
 </html>
