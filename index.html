@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innova IT - Consultoría, Redes e IA</title>
+    <!-- Incluye Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Un gris azulado muy claro */
+            color: #2d3748; /* Texto principal oscuro */
+        }
+        .container {
+            max-width: 1200px; /* Un ancho generoso para el contenido */
+        }
+        /* Estilos para el gradiente de texto en el título principal */
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Encabezado de la página -->
+    <header class="bg-gray-800 text-white p-6 shadow-2xl rounded-b-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Título/Marca con gradiente de texto -->
+            <h1 class="text-4xl lg:text-5xl font-extrabold mb-4 md:mb-0 gradient-text bg-gradient-to-r from-blue-400 to-teal-500">
+                Innova IT Solutions
+            </h1>
+            <!-- Navegación principal -->
+            <nav>
+                <ul class="flex flex-wrap justify-center space-x-6 text-lg font-medium">
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Inicio</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Servicios</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Soluciones IA</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Proyectos</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300 transform hover:scale-105">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero / Banner Principal -->
+    <section class="bg-gradient-to-br from-gray-900 to-gray-700 text-white py-24 px-8 text-center shadow-lg">
+        <div class="container mx-auto">
+            <h2 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Impulsa Tu Negocio con <br class="md:hidden"> Tecnología Inteligente y Redes Robustas
+            </h2>
+            <p class="text-xl lg:text-2xl leading-relaxed mb-10 max-w-4xl mx-auto opacity-90">
+                Expertos en Consultoría IT, Ciberseguridad, Redes y Herramientas de IA para la Optimización Empresarial.
+            </p>
+            <!-- Botón de llamada a la acción principal -->
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transform transition duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-400">
+                Descubre Nuestros Servicios
+            </button>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <main class="flex-grow container mx-auto p-8 my-12 bg-white shadow-xl rounded-lg">
+
+        <!-- Sección "Acerca de Nosotros" -->
+        <section class="mb-16 text-center">
+            <h3 class="text-4xl font-bold mb-6 text-gray-800">Acerca de Innova IT Solutions</h3>
+            <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    En Innova IT Solutions, somos un equipo dedicado a brindar soluciones tecnológicas avanzadas para empresas de todos los tamaños. Con años de experiencia en consultoría, infraestructura de redes y la implementación de inteligencia artificial, nuestro objetivo es optimizar tus operaciones y asegurar tu crecimiento en la era digital.
+                </p>
+                <p>
+                    Nos especializamos en transformar desafíos tecnológicos en oportunidades, garantizando que tu infraestructura sea segura, eficiente y esté preparada para el futuro.
+                </p>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
+        <!-- Sección "Nuestros Servicios" -->
+        <section class="mb-16">
+            <h3 class="text-4xl font-bold mb-10 text-center text-gray-800">Nuestros Servicios Clave</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta de Servicio: Consultoría IT -->
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-indigo-600 mb-4 text-center">💡</div> <!-- Icono de Consultoría (puedes reemplazarlo con SVG) -->
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Consultoría IT Estratégica</h4>
+                    <p class="text-gray-700 text-center">
+                        Asesoramiento experto para alinear tu estrategia tecnológica con tus objetivos de negocio, optimizando procesos y recursos.
+                    </p>
+                </div>
+                <!-- Tarjeta de Servicio: Armado y Mantenimiento de Redes -->
+                <div class="bg-teal-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-teal-600 mb-4 text-center">🌐</div> <!-- Icono de Redes (puedes reemplazarlo con SVG) -->
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Armado y Mantenimiento de Redes</h4>
+                    <p class="text-gray-700 text-center">
+                        Diseño, implementación y soporte continuo de infraestructuras de red robustas y seguras para tu empresa.
+                    </p>
+                </div>
+                <!-- Tarjeta de Servicio: Soluciones de IA -->
+                <div class="bg-purple-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-purple-600 mb-4 text-center">🤖</div> <!-- Icono de IA (puedes reemplazarlo con SVG) -->
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Implementación de Herramientas IA</h4>
+                    <p class="text-gray-700 text-center">
+                        Integración de soluciones de Inteligencia Artificial para automatización, análisis de datos y mejora de la eficiencia operativa.
+                    </p>
+                </div>
+                <!-- Nueva Tarjeta de Servicio: Ciberseguridad -->
+                <div class="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-red-600 mb-4 text-center">🔒</div> <!-- Icono de Seguridad (puedes reemplazarlo con SVG) -->
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Ciberseguridad Avanzada</h4>
+                    <p class="text-gray-700 text-center">
+                        Protección integral contra amenazas cibernéticas, garantizando la seguridad y privacidad de tus datos.
+                    </p>
+                </div>
+                <!-- Nueva Tarjeta de Servicio: Soporte Técnico -->
+                <div class="bg-yellow-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-yellow-600 mb-4 text-center">🛠️</div> <!-- Icono de Soporte (puedes reemplazarlo con SVG) -->
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Soporte Técnico Especializado</h4>
+                    <p class="text-gray-700 text-center">
+                        Asistencia técnica rápida y eficiente para resolver cualquier incidencia y mantener tus sistemas operativos.
+                    </p>
+                </div>
+                <!-- Nueva Tarjeta de Servicio: Desarrollo de Software a Medida -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-600 mb-4 text-center">💻</div> <!-- Icono de Desarrollo (puedes reemplazarlo con SVG) -->
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800 text-center">Desarrollo de Software a Medida</h4>
+                    <p class="text-gray-700 text-center">
+                        Creación de aplicaciones y herramientas personalizadas para optimizar tus flujos de trabajo y necesidades específicas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
+        <!-- Sección "Por Qué Elegirnos" -->
+        <section class="mb-16 text-center bg-gray-50 p-10 rounded-lg shadow-inner">
+            <h3 class="text-4xl font-bold mb-8 text-gray-800">¿Por Qué Elegir Innova IT Solutions?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="text-left">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Integración de IA</h4>
+                    <p class="text-gray-700">
+                        Llevamos la eficiencia al siguiente nivel con la implementación estratégica de inteligencia artificial en tus procesos.
+                    </p>
+                </div>
+                <div class="text-left">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Soluciones Personalizadas</h4>
+                    <p class="text-gray-700">
+                        Cada negocio es único. Diseñamos soluciones IT a medida que se adaptan perfectamente a tus requerimientos.
+                    </p>
+                </div>
+                <div class="text-left">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Equipo de Expertos</h4>
+                    <p class="text-gray-700">
+                        Contamos con profesionales altamente cualificados y certificados en las últimas tecnologías.
+                    </p>
+                </div>
+                <div class="text-left">
+                    <h4 class="text-2xl font-semibold mb-2 text-blue-700">Resultados Medibles</h4>
+                    <p class="text-gray-700">
+                        Nos enfocamos en ofrecer soluciones que generen un impacto positivo y cuantificable en tu negocio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
+        <!-- Sección de Llamada a la Acción para Consulta -->
+        <section class="text-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-10 rounded-lg shadow-xl">
+            <h3 class="text-4xl font-bold mb-4">
+                Transforma Tu Infraestructura Tecnológica
+            </h3>
+            <p class="text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                ¿Listo para optimizar tus sistemas, asegurar tus redes e integrar la inteligencia artificial? Contáctanos hoy mismo.
+            </p>
+            <!-- Botón de llamada a la acción para servicios -->
+            <button class="bg-white hover:bg-gray-100 text-indigo-700 font-bold py-4 px-10 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white">
+                Agenda una Consulta Gratuita
+            </button>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-900 text-white p-8 mt-16 rounded-t-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+            <p class="mb-4 md:mb-0">&copy; 2025 Innova IT Solutions. Todos los derechos reservados.</p>
+            <div class="flex space-x-6">
+                <!-- Puedes añadir iconos de redes sociales aquí (por ejemplo, Font Awesome o SVG) -->
+                <a href="#" class="hover:text-blue-400 transition duration-300">Facebook</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Twitter</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">LinkedIn</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
